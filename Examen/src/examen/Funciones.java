@@ -81,7 +81,7 @@ public class Funciones extends JFrame{
          private void calcularResultado() {
 		if (numoperacion.equals("Convertir")) {
 			resultado = new Double(superior.getText());       
-                        res2=resultado*20;
+                        res2=resultado/20;
                 } 
                 superior.setText("" + res2);
                 //superior.setText("" + resultado);        
@@ -120,14 +120,7 @@ public class Funciones extends JFrame{
 			resultado = 0;
 			superior.setText("");
 			reiniciar = true;
-		} else {
-			numoperacion = tecla;
-			if ((resultado > 0) && !reiniciar) {
-				calcularResultado();
-			} else {
-                            resultado = new Double(superior.getText());    
-                        }
-		}
+		} 
 
 		reiniciar = true;
 	}
